@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>signinPage</title>
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Playfair+Display:ital@1&family=Roboto:wght@500&display=swap');
+        
+        *{font-family: Roboto;}
+        
+        .main{background-image: url("에스엠.jpg"); height: 950px; display: grid; place-content: center;}
+
+        .container{
+            width: 300px;
+            height: 400px;
+            margin-top: 500px;
+            background-color: pink;
+            display: block; margin: 0 auto;
+            box-shadow: 5px 5px 5px hotpink;
+        }
+
+        img{margin-top: 10px; margin-bottom: 10px; display: block; margin: 0 auto;}
+
+        .bon1{
+            height: 44px;
+            width: 228px;
+            background-color: #eaeaea;
+            margin-left: 38px;
+            margin-top: 28px;
+        }
+
+        .bon2{
+            height: 44px;
+            width: 228px;
+            background-color: #eaeaea;
+            margin-left: 38px;
+            margin-top: 20px;
+        }
+
+        .hhh{
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: hotpink;
+            height: 44px;
+            width: 228px;
+            margin-left: 38px;
+        }
+    </style>
+</head>
+
+<fieldset class="main">
+<fieldset class="container">
+  <br>
+    <img src="에스엠로고.png" height="100px">
+    <br>
+    <input type="text" class="bon1" placeholder="ID를 입력하세요" id="userid"><br>
+    <input type="password" class="bon2" placeholder="비밀번호" id="userpw">
+    <input type="button" class="hhh" value="로그인" id="signinButton">
+  </fieldset>
+</fieldset>
+</body>
+
+
+  <script type="text/javascript">
+    console.log(document);
+
+    var signinButton = document.getElementById("signinButton")
+    signinButton.addEventListener('click', signinFunc)
+
+    function signinFunc () {
+      var userid = document.getElementById("userid").value;
+      var userpw = document.getElementById("userpw").value;
+
+
+      if(userid == "idid" && userpw == "0000") {
+        location.href="메인.html";
+        console.log("로그인 성공했습니다.");
+      } else {
+        alert("로그인 실패");
+        console.log("로그인 실패했습니다.");
+      }
+
+
+    }
+
+  </script>
+ 
+
+</html>
